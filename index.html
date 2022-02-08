@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./imagens/icon.png">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div id="container">
+        <img id="img" src="">
+        <div class="descricao">
+            <h2></h2>
+            <i></i>
+        </div>
+        <div class="duracao">
+
+            <div class="barra">
+                <progress value="0.0" max="1"></progress>
+                <div class="ponto"></div>
+            </div>
+
+            <div class="tempo">
+                <p class="inicio"></p>
+                <p class="fim"></p>
+            </div>
+
+        </div>
+
+        <div class="controle">
+            <img class="btn" onclick="anterior()" src="./botoes/skip_previous_black_24dp.svg">
+            <img class="btn" onclick="retroceder()" src="./botoes/fast_rewind_black_24dp.svg">
+            <img class="btn play" onclick="play()" src="./botoes/play_arrow_black_24dp.svg">
+            <img class="btn pause" onclick="pause()" src="./botoes/pause_black_24dp.svg">
+            <img class="btn" onclick="avancar()" src="./botoes/fast_forward_black_24dp.svg">
+            <img class="btn" onclick="proximo()" src="./botoes/skip_next_black_24dp.svg">
+        </div>
+        <audio src=""></audio>
+
+    </div>
+
+    <div id="fundo"></div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
