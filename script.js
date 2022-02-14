@@ -8,12 +8,12 @@ let musicas = [
 ]
 
 let musica = document.querySelector("audio");
-let count = 0;
 let duracaoMusica = document.querySelector(".fim");
 let imagem = document.querySelector("#img");
 let nomeMusica = document.querySelector(".descricao h2");
 let nomeArtista = document.querySelector(".descricao i");
 let indexMusica = 0;
+let range = document.querySelector("input");
 
 renderizarMusica(indexMusica)
 musica.addEventListener('timeupdate', atualizarBarra);
@@ -33,7 +33,7 @@ function play() {
     musica.play();
     document.querySelector(".pause").style.display = 'inline-block'
     document.querySelector(".play").style.display = 'none'
-    count++;
+    
 }
 function pause() {
     musica.pause();
@@ -74,14 +74,18 @@ function proximo() {
 
 
 function atualizarBarra() {
-    let barra = document.querySelector('progress');
-    barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) + '%';
+   
+    range.max = musica.duration
+    range.value = 0
     let tempoDecorrido = document.querySelector(".inicio");
     tempoDecorrido.textContent = seg_min(Math.floor(musica.currentTime));
     if(tempoDecorrido.innerHTML === duracaoMusica.innerHTML){
         proximo()
     }
 }
+range.onchange = ()=>{musica.currentTime = range.value}
+musica.ontimeupdate = ()=>{range.value = musica.currentTime}
+
 
 function seg_min(segundos) {
     let campoMinutos = Math.floor(segundos / 60);

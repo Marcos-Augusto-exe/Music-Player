@@ -46,31 +46,10 @@ body{
     width: 300px;
     margin-top: 25px;   
 }
-.barra{
+input{
     width: 300px;
-    height: 6px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
 }
-progress{
-    padding: 3px;
-    height: 6px;
-    width: 0%; 
-    background-color: #eee;
-    border-radius: 5px;
-}
-.ponto{
-    width: 18px;
-    height: 18px;
-    background-color: #eee;
-    border-radius: 50%;
-    margin-left: -8px;
-}
-
 .tempo{
     display: flex;
     width: 300px;
